@@ -32,25 +32,33 @@ namespace CalculadoraBasica
                 MessageBox.Show("Introduce números válidos","ERROR");
                 Limpiar();
             }
-           
-            
-            switch (OperadorTextBox.Text)
+
+            try
             {
-                case "+":
-                    ResultadoTextBox.Text = (n1 + n2).ToString(); 
-                    break;
-                case "-":
-                    ResultadoTextBox.Text = (n1 - n2).ToString();
-                    break;
-                case "*":
-                    ResultadoTextBox.Text = (n1 * n2).ToString();
-                    break;
-                case "/":
-                    ResultadoTextBox.Text = (n1 / n2).ToString();
-                    break;
-                default:
-                    break;
+                switch (OperadorTextBox.Text)
+                {
+                    case "+":
+                        ResultadoTextBox.Text = (n1 + n2).ToString();
+                        break;
+                    case "-":
+                        ResultadoTextBox.Text = (n1 - n2).ToString();
+                        break;
+                    case "*":
+                        ResultadoTextBox.Text = (n1 * n2).ToString();
+                        break;
+                    case "/":
+                        ResultadoTextBox.Text = (n1 / n2).ToString();
+                        break;
+                    default:
+                        break;
+                }
             }
+            catch (System.DivideByZeroException)
+            {
+                MessageBox.Show("Por favor, no trates de dividir entre 0", "ERROR");
+                Limpiar();
+            }
+            
         }
 
         private void LimpiarButton_Click(object sender, RoutedEventArgs e)
