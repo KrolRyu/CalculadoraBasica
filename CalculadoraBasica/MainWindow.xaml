@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalculadoraBasica"
         mc:Ignorable="d"
-        Title="MainWindow" Height="272.293" Width="509.076"
->
+        Title="Calculadora" Height="272.293" Width="509.076"
+        Icon="img/128.ico">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="55,69,0,0" TextWrapping="Wrap" Text="Operando 1" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="55,110,0,0" TextWrapping="Wrap" Text="Operando 2" VerticalAlignment="Top"/>
